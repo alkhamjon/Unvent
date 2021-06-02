@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unvent</title>
+    <link rel="shortcut icon" href="img/Favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section class="home">
+      <header class="header">
+        <div class="header__content">
+          <div class="header__logo">
+            <a class="header__logo-link" href="#">
+              <img class="header__logo-img" src="img/logo.png" alt="логотип" />
+            </a>
+            <p class="header__logo-text">
+              Профессиональный монтаж дымоходов
+              <span class="header__logo-subtext"
+                >любой сложности на территории Киева и Киевской обл.</span
+              >
+            </p>
+          </div>
+          <div class="header__map">
+            <button class="header__map-link">
+              <img class="header__map-img" src="img/map.png" alt="карта" />
+            </button>
+            <a class="header__map-title" href="#">
+              Украина, Киев,
+              <span class="header__map-text">Васильковская 30</span>
+            </a>
+            <div class="modal" id="myModal">
+              <div class="modal-content">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2543.5371368065344!2d30.489816!3d50.3938265!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c8dab3f4759d%3A0x67dced8fbfa28384!2z0YPQuy4g0JLQsNGB0LjQu9GM0LrQvtCy0YHQutCw0Y8sIDMwLCDQmtC40LXQsiwg0KPQutGA0LDQuNC90LAsIDAyMDAw!5e0!3m2!1sru!2s!4v1622647438100!5m2!1sru!2s"
+                  width="100%"
+                  height="100%"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                ></iframe>
+                <span class="close">&times;</span>
+              </div>
+            </div>
+          </div>
+          <div class="header__lang">
+            <p class="header__lang-text">Выбор языка</p>
+            <a
+              href="#"
+              class="header__lang-link header__lang-link--active"
+              id="ru"
+              >RU</a
+            >
+            <a href="#" class="header__lang-link" id="ua">UA</a>
+          </div>
+          <button class="header__btn">Консультация инженера</button>
+          <div class="header__phone">
+            <a class="header__phone-num" href="tel:+380672425878"
+              >+38 067 242-58-78</a
+            >
+            <div class="header__social">
+              <a class="header__social-link" href="#">
+                <img
+                  class="header__social-img viber"
+                  src="img/viber-icon.png"
+                  alt="вибер"
+                />
+              </a>
+              <a class="header__social-link" href="#">
+                <img
+                  class="header__social-img telegram"
+                  src="img/telegram-icon.png"
+                  alt="телеграм"
+                />
+              </a>
+              <a class="header__social-link" href="#">
+                <img
+                  class="header__social-img whatsapp"
+                  src="img/whatsapp-icon.png"
+                  alt="ватсапп"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Калькулятор</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Услуги</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">наши новости</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">отзывы</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">консультация</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">преимущества</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">производство</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">вопрос-ответ</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">контакты</a>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <div class="home__content">
+        <h1 class="home__title">
+          Монтаж дымоходов из нержавеющей стали<span class="home__subtitle">
+            для частных домов и предприятий</span
+          >
+        </h1>
+        <div class="home__services-info">
+          <h2 class="services-info__title">15</h2>
+          <p class="services-info__title-text">
+            лет устанавливаем дымоходы
+            <span class="services-info__title-subtext"
+              >для частных лиц и организаций</span
+            >
+          </p>
+          <p class="services-info__text">
+            Бесплатный выезд инженера
+            <span class="services-info__subtext"
+              >в пределах 30 км. от Киева</span
+            >
+          </p>
+          <p class="services-info__text">
+            Монтаж под ключ от 1 дня,
+            <span class="services-info__subtext">
+              в наличии все разрешительные документы</span
+            >
+          </p>
+        </div>
+        <p class="home__discount-text">
+          Рассчитайте стоимость монтажа вашего дымохода за 1 минуту и
+          <span class="home__discount-subtext">получите скидку 15%</span>
+        </p>
+        <div class="home__wrapper">
+          <button class="home__btn">
+            Рассчитать стоимость монтажа и получить скидку
+          </button>
+          <div class="home__certificate">
+            <h2 class="home__slider-title">Лицензии и сертификаты в наличии</h2>
+            <div class="home__carousel">
+              <div class="home__carousel-item">
+                <a
+                  class="home__carousel-link"
+                  href="img/slider-1.jpg"
+                  data-fancybox="images"
+                  data-width="920"
+                  data-height="1280"
+                >
+                  <img
+                    class="home__carousel-img"
+                    src="img/slider-1.jpg"
+                    alt="Лицензия"
+                  />
+                </a>
+              </div>
+              <div class="home__carousel-item">
+                <a
+                  class="home__carousel-link"
+                  href="img/slider-2.jpg"
+                  data-fancybox="images"
+                  data-width="920"
+                  data-height="1280"
+                >
+                  <img
+                    class="home__carousel-img"
+                    src="img/slider-2.jpg"
+                    alt="Лицензия"
+                  />
+                </a>
+              </div>
+              <div class="home__carousel-item">
+                <a
+                  class="home__carousel-link"
+                  href="img/slider-3.jpg"
+                  data-fancybox="images"
+                  data-width="920"
+                  data-height="1280"
+                >
+                  <img
+                    class="home__carousel-img"
+                    src="img/slider-3.jpg"
+                    alt="Лицензия"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

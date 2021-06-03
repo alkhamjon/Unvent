@@ -82,12 +82,12 @@ h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 620px;
+  width: 900px;
 }
 .header__tel {
   display: flex;
   justify-content: space-between;
-  width: 330px;
+  width: 500px;
 }
 .header__logo,
 .header__map {
@@ -483,6 +483,12 @@ h6 {
   .header__content {
     margin-bottom: 20px;
   }
+  .header__wrapper{
+    width: 800px;
+  }
+  .header__tel{
+    width: 440px;
+  }
   .header__logo-link {
     width: 150px;
     height: 60px;
@@ -538,6 +544,12 @@ h6 {
   .header__logo-text {
     font-size: 12px;
     width: 200px;
+  }
+  .header__wrapper{
+    width: 650px;
+  }
+  .header__tel{
+    width: 330px;
   }
   .header__map-img {
     width: 30px;

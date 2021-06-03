@@ -1,11 +1,4 @@
 $(function(){
-    $('.home__carousel').slick({
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        arrows: true,
-        dots: false
-    });
     $('#ru').on('click', function(){
         $('#ru').removeClass('header__lang--active')
         $('#ua').removeClass('header__lang--active')

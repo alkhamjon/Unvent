@@ -29,6 +29,12 @@ h5,
 h6 {
   margin: 0;
 }
+.container {
+  max-width: 1500px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
 @font-face {
   font-family: "UniNeueHeavy";
   src: url(../assets/Шрифты/UniNeueHeavy.ttf);
@@ -51,15 +57,37 @@ h6 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  height: 100vh;
+  min-height: 100vh;
   border-bottom-right-radius: 150px;
   border-bottom-left-radius: 150px;
+  overflow-x: hidden;
+  position: relative;
+}
+.home__people-img {
+  position: absolute;
+  right: 65px;
+  bottom: 0;
+  max-width: 620px;
+  height: 790px;
+  width: 100%;
+  z-index: -1;
 }
 .header__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 40px;
+}
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 620px;
+}
+.header__tel {
+  display: flex;
+  justify-content: space-between;
+  width: 330px;
 }
 .header__logo,
 .header__map {
@@ -267,7 +295,6 @@ h6 {
   font-size: 60px;
   font-family: "UniNeueBold";
   font-weight: 600;
-  line-height: 60px;
   max-width: 810px;
   width: 100%;
   margin-bottom: 65px;
@@ -278,7 +305,7 @@ h6 {
 }
 .home__services-info {
   display: flex;
-  justify-content: start;
+  align-items: start;
   font-size: 20px;
   margin-bottom: 85px;
 }
@@ -288,6 +315,8 @@ h6 {
   font-weight: 600;
   line-height: 80px;
   padding-left: 20px;
+  display: flex;
+  align-items: flex-start;
   position: relative;
 }
 .services-info__title::before {
@@ -304,6 +333,8 @@ h6 {
   font-family: "UniNeueBold";
   font-weight: 600;
   margin-left: 12px;
+  font-size: 20px;
+  line-height: 22px;
 }
 .services-info__title-subtext {
   font-family: "UniNeueBook";
@@ -401,6 +432,10 @@ h6 {
   margin-left: 100px;
   transform: translateY(-40px);
 }
+.home__carousel {
+  display: flex;
+  justify-content: space-between;
+}
 .home__slider-title {
   font-size: 17px;
   font-family: "UniNeueBold";
@@ -439,6 +474,11 @@ h6 {
 @media (max-width: 1400px) {
   .home {
     padding: 10px 30px 50px;
+  }
+  .home__people-img {
+    right: 40px;
+    max-width: 400px;
+    height: 470px;
   }
   .header__content {
     margin-bottom: 20px;
@@ -569,9 +609,21 @@ h6 {
   }
 }
 @media (max-width: 970px) {
+  .home {
+    padding: 10px 0 50px;
+  }
+  .home__people-img {
+    right: 0;
+  }
   .header__logo-link {
     width: 100px;
     height: 40px;
+  }
+  .header__wrapper {
+    width: 520px;
+  }
+  .header__tel {
+    width: 250px;
   }
   .header__logo-text {
     margin-left: 10px;
@@ -593,6 +645,7 @@ h6 {
   .services-info__title-text {
     width: 132px;
     font-size: 12px;
+    line-height: 18px;
   }
   .home__discount-text {
     width: 330px;
@@ -602,7 +655,7 @@ h6 {
     margin-bottom: 10px;
   }
   .home__carousel-item {
-    width: 65px !important;
+    width: 65px;
   }
   .home__carousel-img {
     width: 60px;
@@ -613,6 +666,9 @@ h6 {
   .home {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+  }
+  .header__wrapper {
+    width: 400px;
   }
   .header__logo-text {
     display: none;
@@ -636,6 +692,17 @@ h6 {
     padding-top: 100px;
     transition: all 0.9s;
     transform: translateX(-500%);
+  }
+  .header__content {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  .header__wrapper {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .header__tel {
+    width: 100%;
   }
   .nav__close {
     top: 10px;
@@ -675,7 +742,7 @@ h6 {
     font-size: 17px;
   }
   .home__carousel-item {
-    width: 94px !important;
+    width: 100%;
   }
   .home__carousel-img {
     width: 92px;
@@ -690,35 +757,53 @@ h6 {
 }
 @media (max-width: 600px) {
   .home {
-    background-position: right;
+    background-position: left;
+  }
+  .home__people-img {
+    position: relative;
   }
   .home__btn {
     padding: 15px 40px 15px 60px;
     width: 250px;
     font-size: 10px;
+    margin: 0 auto 20px;
+  }
+  .home__people-img {
+    margin: 0 auto;
+    bottom: -22px;
+  }
+  .home__certificate {
+    margin: 0 auto;
   }
   .home__title {
-    width: 350px;
+    width: 100%;
   }
   .home__services-info {
     flex-direction: column;
   }
-  .services-info__title-text {
-    margin-left: 0;
+  .header__content {
+    margin-bottom: 70px;
+  }
+  .services-info__title {
+    font-size: 40px;
+    line-height: 30px;
     margin-bottom: 20px;
+    margin-left: 0;
+  }
+  .services-info__title-text {
+    width: 100%;
   }
   .services-info__text {
-    margin-left: 0;
     margin-bottom: 20px;
+    width: 100%;
   }
   .home__discount-text {
-    width: 210px;
+    width: 100%;
   }
 }
 @media (max-width: 500px) {
   .home {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 0;
   }
   .header__content {
     flex-wrap: wrap;
@@ -739,7 +824,7 @@ h6 {
   .header__bars {
     margin-bottom: 10px;
   }
-  .header__nav{
+  .header__nav {
     width: 80%;
   }
 }

@@ -66,6 +66,14 @@ h6 {
   display: flex;
   align-items: center;
 }
+.header__logo-link {
+  width: 180px;
+  height: 75px;
+}
+.header__logo-img {
+  width: 100%;
+  height: 100%;
+}
 .header__logo-text {
   width: 300px;
   font-weight: 600;
@@ -76,19 +84,24 @@ h6 {
   font-family: "UniNeueRegular";
   font-weight: 400;
 }
-.header__map-link{
+.header__map-link {
   border: none;
   background: none;
   padding: 0;
   cursor: pointer;
   font-size: 0;
 }
+.header__map-img {
+  width: 75px;
+  height: 75px;
+}
 .header__map-title {
   font-size: 16px;
   font-weight: 600;
   margin-left: 18px;
+  font-family: "UniNeueHeavy";
 }
-.header__map-title:hover{
+.header__map-title:hover {
   color: #fe5953;
 }
 .header__map-text {
@@ -104,10 +117,10 @@ h6 {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%; 
+  height: 100%;
   overflow: auto;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 .modal-content {
   background-color: #fefefe;
@@ -132,7 +145,7 @@ h6 {
   text-decoration: none;
   cursor: pointer;
 }
-.header__lang-text{
+.header__lang-text {
   font-size: 20px;
   font-family: "UniNeueBold";
 }
@@ -142,10 +155,10 @@ h6 {
   text-transform: uppercase;
   font-weight: 600;
 }
-.header__lang-link:hover{
+.header__lang-link:hover {
   color: #e83e3e;
 }
-.header__lang--active{
+.header__lang--active {
   color: #fe5953;
 }
 .header__btn {
@@ -178,8 +191,17 @@ h6 {
     left: 150%;
   }
 }
+.header__btn:hover {
+  box-shadow: 0 5px 20px #313d4b;
+}
+.header__phone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .header__phone-num {
   font-size: 22px;
+  font-family: "UniNeueHeavy";
   font-weight: 600;
   display: block;
   margin-bottom: 10px;
@@ -188,11 +210,20 @@ h6 {
 .header__phone-num::before {
   content: "";
   background-image: url(../img/tel-icon.png);
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 16px;
   height: 16px;
   position: absolute;
   top: 5px;
   left: -22px;
+}
+.header__social-link {
+  width: 100%;
+}
+.header__social-img {
+  width: 50px;
+  height: 50px;
 }
 .viber:hover {
   border: 2px solid #7460f3;
@@ -205,6 +236,17 @@ h6 {
 .whatsapp:hover {
   border: 2px solid #25d266;
   border-radius: 50%;
+}
+.header__bars {
+  background: none;
+  border: none;
+  display: none;
+  padding: 0;
+}
+.header__bars-img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
 }
 .header__nav {
   margin-bottom: 100px;
@@ -226,7 +268,8 @@ h6 {
   font-family: "UniNeueBold";
   font-weight: 600;
   line-height: 60px;
-  width: 810px;
+  max-width: 810px;
+  width: 100%;
   margin-bottom: 65px;
 }
 .home__subtitle {
@@ -351,6 +394,9 @@ h6 {
     left: 150%;
   }
 }
+.home__btn:hover {
+  box-shadow: 0 20px 25px #fe7653;
+}
 .home__certificate {
   margin-left: 100px;
   transform: translateY(-40px);
@@ -365,4 +411,346 @@ h6 {
 .home__carousel-img {
   width: 92px;
   height: 116px;
+}
+
+/* ====================================================================================================
+                                              Responsive
+======================================================================================================= */
+@media (max-width: 1740px) {
+  .home {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .header__phone-num,
+  .header__lang-text {
+    font-size: 18px;
+  }
+  .header__lang-link {
+    font-size: 16px;
+  }
+  .header__btn {
+    padding: 20px 25px;
+  }
+  .header__logo-text {
+    font-size: 16px;
+    width: 250px;
+  }
+}
+@media (max-width: 1400px) {
+  .home {
+    padding: 10px 30px 50px;
+  }
+  .header__content {
+    margin-bottom: 20px;
+  }
+  .header__logo-link {
+    width: 150px;
+    height: 60px;
+  }
+  .header__logo-text {
+    margin-left: 20px;
+  }
+  .header__map-img {
+    width: 50px;
+    height: 50px;
+  }
+  .header__map-title {
+    margin-left: 10px;
+  }
+  .header__social-img {
+    width: 40px;
+    height: 40px;
+  }
+  .header__nav {
+    margin-bottom: 30px;
+  }
+  .home__title {
+    font-size: 40px;
+    width: 550px;
+    margin-bottom: 40px;
+    line-height: 40px;
+  }
+  .home__services-info {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+  .services-info__text {
+    width: 180px;
+    margin-left: 20px;
+  }
+  .services-info__title-text {
+    width: 180px;
+  }
+  .services-info__title {
+    line-height: 50px;
+  }
+  .home__discount-text {
+    margin-bottom: 15px;
+  }
+  .home__btn {
+    padding: 14px 35px 14px 100px;
+  }
+  .home__btn::before {
+    top: 28px;
+  }
+}
+@media (max-width: 1250px) {
+  .header__logo-text {
+    font-size: 12px;
+    width: 200px;
+  }
+  .header__map-img {
+    width: 30px;
+    height: 30px;
+  }
+  .header__map-title {
+    font-size: 12px;
+  }
+  .header__lang-text {
+    font-size: 12px;
+  }
+  .header__lang-link {
+    font-size: 10px;
+  }
+  .header__btn {
+    padding: 15px;
+    font-size: 12px;
+  }
+  .header__phone-num {
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+  .header__phone-num::before {
+    width: 10px;
+    height: 10px;
+    top: 6px;
+    left: -10px;
+  }
+  .header__social-img {
+    width: 25px;
+    height: 25px;
+  }
+  .header__nav-link {
+    font-size: 12px;
+  }
+  .home__title {
+    font-size: 37px;
+    line-height: 40px;
+    margin-bottom: 30px;
+  }
+  .services-info__title {
+    font-size: 55px;
+    line-height: 60px;
+  }
+  .services-info__title-text {
+    font-size: 16px;
+    margin-left: 5px;
+  }
+  .services-info__text {
+    font-size: 16px;
+    padding-left: 15px;
+  }
+  .home__discount-text {
+    font-size: 14px;
+  }
+  .home__btn {
+    font-size: 14px;
+    padding: 10px 40px 10px 60px;
+    width: 300px;
+  }
+  .home__btn::before {
+    top: 12px;
+    left: 10px;
+  }
+
+  .home__certificate {
+    margin-left: 0;
+    transform: translate(-140px, -40px);
+  }
+}
+@media (max-width: 970px) {
+  .header__logo-link {
+    width: 100px;
+    height: 40px;
+  }
+  .header__logo-text {
+    margin-left: 10px;
+  }
+  .header__map-title {
+    margin-left: 5px;
+  }
+  .header__btn {
+    font-size: 8px;
+  }
+  .header__logo-text {
+    font-size: 10px;
+    width: 160px;
+  }
+  .services-info__text {
+    width: 132px;
+    font-size: 12px;
+  }
+  .services-info__title-text {
+    width: 132px;
+    font-size: 12px;
+  }
+  .home__discount-text {
+    width: 330px;
+  }
+  .home__slider-title {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .home__carousel-item {
+    width: 65px !important;
+  }
+  .home__carousel-img {
+    width: 60px;
+    height: 80px;
+  }
+}
+@media (max-width: 800px) {
+  .home {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .header__logo-text {
+    display: none;
+  }
+  .header__nav-link {
+    font-size: 10px;
+  }
+  .home__certificate {
+    transform: translate(0, -40px);
+  }
+}
+@media (max-width: 700px) {
+  .header__nav {
+    position: fixed;
+    width: 60%;
+    height: 100%;
+    background-color: #fff;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    padding-top: 100px;
+    transition: all 0.9s;
+    transform: translateX(-500%);
+  }
+  .nav__close {
+    top: 10px;
+    right: 10px;
+    color: #000;
+  }
+  .header__nav--active {
+    transform: translateX(0);
+  }
+  .header__nav-list {
+    flex-direction: column;
+    text-align: center;
+  }
+  .header__nav-link {
+    font-size: 14px;
+    margin-bottom: 15px;
+    display: block;
+  }
+  .header__nav-link:hover {
+    text-decoration: underline;
+  }
+  .home__title {
+    font-size: 25px;
+    line-height: 30px;
+    width: 460px;
+  }
+  .home__wrapper {
+    flex-direction: column;
+  }
+  .home__btn {
+    margin-bottom: 20px;
+  }
+  .home__certificate {
+    transform: translate(0);
+  }
+  .home__slider-title {
+    font-size: 17px;
+  }
+  .home__carousel-item {
+    width: 94px !important;
+  }
+  .home__carousel-img {
+    width: 92px;
+    height: 110px;
+  }
+  .header__map {
+    display: none;
+  }
+  .header__bars {
+    display: block;
+  }
+}
+@media (max-width: 600px) {
+  .home {
+    background-position: right;
+  }
+  .home__btn {
+    padding: 15px 40px 15px 60px;
+    width: 250px;
+    font-size: 10px;
+  }
+  .home__title {
+    width: 350px;
+  }
+  .home__services-info {
+    flex-direction: column;
+  }
+  .services-info__title-text {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+  .services-info__text {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+  .home__discount-text {
+    width: 210px;
+  }
+}
+@media (max-width: 500px) {
+  .home {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .header__content {
+    flex-wrap: wrap;
+  }
+  .header__btn {
+    order: 1;
+  }
+  .header__phone {
+    order: 2;
+  }
+  .header__bars {
+    margin-left: 40px;
+  }
+  .header__lang {
+    margin-left: 60px;
+  }
+  .header__logo,
+  .header__bars {
+    margin-bottom: 10px;
+  }
+  .header__nav{
+    width: 80%;
+  }
+}
+@media (max-width: 400px) {
+  .home__title {
+    width: 250px;
+  }
+  .header__bars {
+    margin-left: 0;
+  }
+  .header__lang {
+    margin-left: 0;
+  }
 }

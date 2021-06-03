@@ -16,6 +16,12 @@ $(function(){
         $('#ru').removeClass('header__lang--active')
         $('#ua').addClass('header__lang--active')
     });
+    $('.header__bars').on('click', function(){
+        $('.header__nav').toggleClass('header__nav--active')
+    });
+    $('.nav__close').on('click', function(){
+        $('.header__nav').removeClass('header__nav--active')
+    });
 });
 
 var modal = document.getElementById("myModal");
